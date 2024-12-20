@@ -155,7 +155,7 @@ class Person extends Model
 		{
 			if($builder->insert($person_data))
 			{
-				$person_data['person_id'] = $this->db->insertID();
+				$person_data['person_id'] = $this->getInsertID();
 
 				return true;
 			}

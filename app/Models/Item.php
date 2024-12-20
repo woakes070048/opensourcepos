@@ -467,7 +467,7 @@ class Item extends Model
 		{
 			if($builder->insert($item_data))
 			{
-				$item_data['item_id'] = (int)$this->db->insertID();
+				$item_data['item_id'] = (int)$this->getInsertID();
 				if($item_id < 1)
 				{
 					$builder = $this->db->table('items');

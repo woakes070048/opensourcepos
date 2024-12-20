@@ -30,7 +30,7 @@ class Rewards extends Model	//TODO: This class is named with plural while the ge
 		{
 			if($builder->insert($rewards_data))
 			{
-				$rewards_data['id'] = $this->db->insertID();
+				$rewards_data['id'] = $this->getInsertID();
 
 				return true;
 			}

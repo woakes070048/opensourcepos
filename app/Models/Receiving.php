@@ -131,7 +131,7 @@ class Receiving extends Model
 
 		$builder = $this->db->table('receivings');
 		$builder->insert($receivings_data);
-		$receiving_id = $this->db->insertID();
+		$receiving_id = $this->getInsertID();
 
 		$builder = $this->db->table('receivings_items');
 

@@ -583,7 +583,7 @@ class Sale extends Model
 		{
 			$builder = $this->db->table('sales');
 			$builder->insert($sales_data);
-			$sale_id = $this->db->insertID();
+			$sale_id = $this->getInsertID();
 		}
 		else
 		{

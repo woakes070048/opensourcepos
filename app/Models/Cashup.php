@@ -249,7 +249,7 @@ class Cashup extends Model
 			$builder = $this->db->table('cash_up');
 			if($builder->insert($cash_up_data))
 			{
-				$cash_up_data['cashup_id'] = $this->db->insertID();
+				$cash_up_data['cashup_id'] = $this->getInsertID();
 
 				return true;
 			}

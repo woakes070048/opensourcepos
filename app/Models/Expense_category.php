@@ -117,7 +117,7 @@ class Expense_category extends Model
 		{
 			if($builder->insert($expense_category_data))
 			{
-				$expense_category_data['expense_category_id'] = $this->db->insertID();
+				$expense_category_data['expense_category_id'] = $this->getInsertID();
 
 				return true;
 			}

@@ -170,7 +170,7 @@ class Tax extends Model
 		{
 			if($builder->insert($tax_rate_data))
 			{
-				$tax_rate_data['tax_rate_id'] = $this->db->insertID();
+				$tax_rate_data['tax_rate_id'] = $this->getInsertID();
 
 				return true;
 			}

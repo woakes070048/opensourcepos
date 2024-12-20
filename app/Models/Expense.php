@@ -285,7 +285,7 @@ class Expense extends Model
 		{
 			if($builder->insert($expense_data))
 			{
-				$expense_data['expense_id'] = $this->db->insertID();
+				$expense_data['expense_id'] = $this->getInsertID();
 
 				return true;
 			}

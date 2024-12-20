@@ -117,7 +117,7 @@ class Tax_category extends Model
 		{
 			if($builder->insert($tax_category_data))
 			{
-				$tax_category_data['tax_category_id'] = $this->db->insertID();
+				$tax_category_data['tax_category_id'] = $this->getInsertID();
 
 				return true;
 			}

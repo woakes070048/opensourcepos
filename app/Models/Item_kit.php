@@ -175,7 +175,7 @@ class Item_kit extends Model
 		{
 			if($builder->insert($item_kit_data))
 			{
-				$item_kit_data['item_kit_id'] = $this->db->insertID();
+				$item_kit_data['item_kit_id'] = $this->getInsertID()ID();
 
 				return true;
 			}

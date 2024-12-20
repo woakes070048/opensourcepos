@@ -120,7 +120,7 @@ class Tax_jurisdiction extends Model
 		{
 			if($builder->insert($jurisdiction_data))	//TODO: Replace this with simply a return of the result of insert()... see update() below.
 			{
-				$jurisdiction_data['jurisdiction_id'] = $this->db->insertID();
+				$jurisdiction_data['jurisdiction_id'] = $this->getInsertID();
 				return true;
 			}
 

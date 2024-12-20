@@ -153,8 +153,8 @@ class Giftcard extends Model
 		{
 			if($builder->insert($giftcard_data))
 			{
-				$giftcard_data['giftcard_number'] = $this->db->insertID();
-				$giftcard_data['giftcard_id'] = $this->db->insertID();
+				$giftcard_data['giftcard_number'] = $this->getInsertID();
+				$giftcard_data['giftcard_id'] = $this->getInsertID();
 
 				return true;
 			}
